@@ -1,17 +1,28 @@
 # importing the requests library
 import requests
+
+request_headers = {
+      "Accept-Language": "en-US,en;q=0.5",
+      "User-Agent": "Mozilla/5.0 (Windows NT 10.0; WOW64; rv:40.0) Gecko/20100101 Firefox/40.0",
+      "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+      "Referer": "https://moopt.com",
+      "Connection": "keep-alive" 
+}
   
 # api-endpoint
-URL = "https://moopt.com/api/v1/models"
-  
-# location given here
-apiKey = "ab84fdd454a49cace58fc5d826d548ae"
-  
+URL = "http://localhost:3000/api/v1/solve"
+    
 # defining a params dict for the parameters to be sent to the API
-PARAMS = {'api_key':apiKey}
+PARAMS = {
+      'api_key': 'ab84fdd454a49cace58fc5d826d548ae', 
+      '_id': 'GeQoLFwJv42D5AQAR',
+      'solver': 'gecode',
+      'timeout': '60000',
+      'dat': 'budget = 10000;'
+}
   
 # sending get request and saving the response as response object
-r = requests.get(url = URL, params = PARAMS)
+r = requests.get(url = URL, params = PARAMS, headers = request_headers)
   
 # extracting data in json format
 data = r.json()
