@@ -10,7 +10,7 @@ request_headers = {
 }
   
 # api-endpoint
-URL = "http://localhost:3000/api/v1/solve"
+URL = "http://moopt.com/api/v1/solve"
     
 # defining a params dict for the parameters to be sent to the API
 PARAMS = {
