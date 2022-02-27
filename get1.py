@@ -15,10 +15,10 @@ URL = "http://moopt.com/api/v1/solve"
 # defining a params dict for the parameters to be sent to the API
 PARAMS = {
       'api_key': 'ab84fdd454a49cace58fc5d826d548ae', 
-      '_id': 'GeQoLFwJv42D5AQAR',
-      'solver': 'gecode',
+      '_id': 'NxLpMHe8rFmSm8DP9',
+      'solver': 'coinbc',
       'timeout': '60000',
-      'dat': 'budget = 10000;'
+      'dat': 'n = 5; \nd = array2d(Range, Range,[99999999,354,361,1490,2171,353,99999999,722,1170,1852,366,723,99999999,1859,2540,1490,1172,1859,99999999,686,2185,1867,2554,700,99999999]); \ncities = array1d(Range, ["KualaLumpur","GeorgeTown","RafflesAvenue","Bangkok","ChiangMai"]); \nlongitudes = array1d(Range, ["101.686855", "100.3287506", "103.8631368", "100.5017651", "98.9853008"]); \nlatitudes = array1d(Range, ["3.139003", "5.4141307", "1.2892988", "13.7563309", "18.7883439"]);'
 }
   
 # sending get request and saving the response as response object
